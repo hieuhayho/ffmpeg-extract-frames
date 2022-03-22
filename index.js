@@ -3,6 +3,7 @@
 const ffmpeg = require('fluent-ffmpeg')
 const path = require('path')
 const probe = require('ffmpeg-probe')
+const ffmpegPath = require('@ffmpeg-installer/ffmpeg').path;
 
 const noop = () => { }
 
@@ -19,7 +20,7 @@ module.exports = async (opts) => {
     offsets,
     fps,
     numFrames,
-    ffmpegPath
+    //ffmpegPath
   } = opts
 
   if (!input) throw new Error('missing required input')
